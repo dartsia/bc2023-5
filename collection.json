@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "bb835dda-f1bd-469f-9fef-9e6ca80726ca",
+		"name": "Lab5-2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31187535"
+	},
+	"item": [
+		{
+			"name": "GET notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/notes"
+			},
+			"response": []
+		},
+		{
+			"name": "GET UploadForm",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/UploadForm.html"
+			},
+			"response": []
+		},
+		{
+			"name": "Create new note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "note_name",
+							"value": "Young Royals 1",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "All the people are fake, they're made out of metal",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "GET one note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/notes/Young%20Royals%201"
+			},
+			"response": []
+		},
+		{
+			"name": "Get non-existent note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/notes/Heartstopper"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "note",
+							"value": "And then you sang like you were almost the loudest.",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/notes/Young%20Royals%201"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT non-existent note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "Be yourself",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/notes/Heartstopper"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/notes/Young%20Royals%201"
+			},
+			"response": []
+		}
+	]
+}
